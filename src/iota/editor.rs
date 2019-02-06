@@ -201,9 +201,7 @@ impl<'e> Editor<'e> {
     fn handle_operation(&mut self, command: Command) {
         match command.action {
             Action::Operation(Operation::Insert(c)) => {
-                for _ in 0..command.number {
-                    self.view.insert_char(c)
-                }
+                self.view.insert_char(c);
             }
             Action::Operation(Operation::DeleteObject) => {
                 if let Some(obj) = command.object {

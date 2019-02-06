@@ -1,7 +1,11 @@
+# Rust
 target
 *.swp
 *.racertmp
 .cargo
 config.mk
 config.tmp
+
+# IDEs
 /.vscode
+/.idea/
